@@ -8,6 +8,7 @@ Note: I didn't delete any object instantiated by the new keyword.
 
 |   Benchmarks  |            	|
 |---------------|-------------|
+| File          | enwik8      |
 | Comp. ratio 	 | 2.75       	|
 | Encoding time | 65sec~70sec |
 | Decoding time | 6sec~9sec 	 |
