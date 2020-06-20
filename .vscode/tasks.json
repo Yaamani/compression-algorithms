@@ -1,0 +1,44 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "shell: clang++ build active file",
+			"command": "clang++",
+			"args": [
+				"-std=c++17",
+				"-stdlib=libc++",
+				"-g",
+				"**.cpp",
+				"-o",
+				"main"
+				//"-v"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "run",
+			"command": "./main",
+			"problemMatcher": [
+				"$gcc"
+			]
+		}, 
+		{
+			"label": "build & run", 
+			"dependsOrder": "sequence",
+			"dependsOn": ["shell: clang++ build active file", "run"], 
+			"problemMatcher": [
+				"$gcc"
+			]
+		}
+	]
+}
